@@ -8,6 +8,29 @@ Built for the **36-Hour International Hackathon — Build Without Limit.**
 
 ---
 
+## 💡 About the Project
+
+ScamShield AI is designed to help people identify online scams before they become victims. Users can analyze suspicious messages and URLs, understand potential threats, view risk scores, and receive actionable safety recommendations.
+
+Our mission is to make digital security accessible, understandable, and safer for everyone.
+
+---
+
+## 🧩 Application Modules
+
+| Module | Description |
+|---|---|
+| Home | Introduction to ScamShield AI |
+| Dashboard | Threat statistics and scan analytics |
+| Message Scanner | Analyze suspicious text messages |
+| URL Scanner | Detect suspicious URL patterns |
+| Threat Center | Learn about different scam types |
+| History | View previous scans |
+| AI Assistant | Get cybersecurity guidance |
+| About | Project information |
+
+---
+
 ## 🔥 Features
 
 | Feature | Description |
@@ -38,6 +61,45 @@ Built for the **36-Hour International Hackathon — Build Without Limit.**
 - **Pydantic v2** — Schema validation
 - **Uvicorn** — ASGI server
 - **Hybrid AI Engine** — Rule-based NLP + weighted indicator analysis
+
+### Detection Engine
+- Rule-based threat detection
+- Weighted risk scoring
+- Explainable analysis
+- Suspicious pattern detection
+
+---
+
+## 🏗️ Architecture
+
+```text
+                USER
+                 │
+                 ▼
+         REACT FRONTEND
+                 │
+                 ▼
+          FASTAPI BACKEND
+                 │
+                 ▼
+        INPUT VALIDATION
+                 │
+                 ▼
+       THREAT DETECTION ENGINE
+          ┌──────┴──────┐
+          ▼             ▼
+    MESSAGE SCAN    URL ANALYSIS
+          │             │
+          └──────┬──────┘
+                 ▼
+           RISK SCORING
+                 │
+                 ▼
+       EXPLANATION & SAFETY TIPS
+                 │
+                 ▼
+         RESULTS DASHBOARD
+```
 
 ---
 
@@ -73,7 +135,7 @@ SCAMSHIELD AI/
 
 ### Prerequisites
 - **Node.js** 18+
-- **Python** 3.9+
+- **Python 3.9+**
 - **npm** or **yarn**
 
 ### 1. Clone / Navigate to project
@@ -84,6 +146,7 @@ cd "SCAMSHIELD AI"
 ### 2. Backend Setup
 ```bash
 cd backend
+python -m venv venv        # optional virtual environment
 pip install -r requirements.txt
 python run.py
 # Backend runs at http://localhost:8000
@@ -91,6 +154,8 @@ python run.py
 #   python run.py --port 8001
 # and set VITE_API_URL=http://localhost:8001 in frontend/.env to match.
 ```
+
+API docs available at `http://localhost:8000/docs` (or your chosen port).
 
 ### 3. Frontend Setup
 ```bash
@@ -173,6 +238,35 @@ Get accumulated scan statistics.
 
 ---
 
+## 🔍 Scam Categories
+
+ScamShield AI focuses on detecting patterns related to:
+
+- Phishing attacks
+- Fake job offers
+- OTP fraud
+- Banking scams
+- UPI fraud
+- Lottery scams
+- Investment scams
+- Delivery scams
+- Impersonation
+- Suspicious URLs
+
+---
+
+## 📋 How It Works
+
+1. Enter a suspicious message or URL.
+2. The application validates the input.
+3. The detection engine analyzes suspicious indicators.
+4. A risk score is calculated.
+5. The detected threat category is identified.
+6. Suspicious phrases and signals are explained.
+7. Safety recommendations are displayed.
+
+---
+
 ## 🧪 Testing
 
 ### Backend Tests
@@ -216,12 +310,26 @@ The application includes 6 built-in demo examples for judges:
 - ✅ API keys stored in environment variables
 - ✅ Input validation and size limits
 - ✅ CORS properly configured
+- ✅ Never share OTPs, passwords, or banking credentials
+- ✅ Risk scores are estimates and not guarantees
 
 ---
 
 ## ⚠️ Disclaimer
 
 > ScamShield AI is an assistive security tool. Its analysis may be incorrect. Always verify important messages through official channels. Never share OTPs, passwords, or banking credentials with anyone.
+
+---
+
+## 🔮 Future Scope
+
+- Multilingual scam detection
+- Browser extension
+- Advanced machine learning models
+- Real-time threat intelligence
+- Community scam reporting
+- Voice-based scam detection
+- Mobile application
 
 ---
 
@@ -233,4 +341,4 @@ The application includes 6 built-in demo examples for judges:
 
 ---
 
-*Built with ❤️ and ☕ in 36 hours.*
+*Built with ❤️ and ☕ in 36 hours. Think Before You Click.* 🔴🖤
