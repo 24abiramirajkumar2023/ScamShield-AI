@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #050505;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Cyber grid background */
+.cyber-grid {
+  background-image:
+    linear-gradient(rgba(255, 32, 32, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 32, 32, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Red glow effects */
+.glow-red {
+  box-shadow: 0 0 20px rgba(255, 32, 32, 0.3), inset 0 0 20px rgba(255, 32, 32, 0.05);
+}
+
+.glow-red-intense {
+  box-shadow: 0 0 40px rgba(255, 32, 32, 0.5), 0 0 80px rgba(255, 32, 32, 0.2);
+}
+
+.border-glow {
+  border: 1px solid #321010;
+  box-shadow: 0 0 10px rgba(255, 32, 32, 0.1);
+}
+
+.text-glow {
+  text-shadow: 0 0 10px rgba(255, 32, 32, 0.5);
+}
+
+/* Glass SOC panel */
+.soc-panel {
+  background: rgba(17, 17, 17, 0.9);
+  backdrop-filter: blur(12px);
+  border: 1px solid #321010;
+  box-shadow: 0 0 18px rgba(255, 32, 32, 0.08);
+}
+
+.soc-panel-elevated {
+  background: rgba(23, 23, 23, 0.95);
+  backdrop-filter: blur(16px);
+  border: 1px solid #321010;
+  box-shadow: 0 0 24px rgba(255, 32, 32, 0.12);
+}
+
+/* Scanning line animation */
+@keyframes scanLine {
+  0% {
+    top: -2px;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+.scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #FF2020, transparent);
+  animation: scanLine 3s linear infinite;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #321010;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF2020;
+}

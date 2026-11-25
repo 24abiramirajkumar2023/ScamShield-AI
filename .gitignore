@@ -1,0 +1,24 @@
+# Environment files & secrets (keep .example templates)
+.env
+.env.local
+.env.*.local
+
+# Node dependencies & build output
+node_modules/
+frontend/dist/
+*.log
+npm-debug.log*
+
+# Python caches & virtual environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
